@@ -10,8 +10,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_geral)
-
+        setContentView(R.layout.activity_main)
+/*
         // findViewById(id) - acessando o botão
         val botaoTelaLoginGeral = findViewById<Button>(R.id.botao_entrar)
 
@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
             // chamada do metodo
             irTelaCadastroDoador()
         }
-
+*/
     }
 
-    private fun irTelaCadastroDoador(){
+    private fun irTelaCadastroDoador() {
         // Criando uma intenção - Ir de uma activity para outra (Navegar entre Activitys)
         // A tela cadastro doador recebe um Intent
         // na Class Intent, o parametro context: this indica qual a activity atual estamos (MainActivity)
