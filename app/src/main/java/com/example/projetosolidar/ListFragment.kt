@@ -29,8 +29,7 @@ class ListFragment : Fragment() {
                 imagem = "Imagine uma Cenoura",
                 descricao = "Uma Cenoura",
                 quantidade = 5,
-                vencimento = "26/06/2022",
-                retirada = "25/06/2022",
+                valor = 0,
                 categoria = "Horti-fruit",
             ),
             Produto(
@@ -38,8 +37,7 @@ class ListFragment : Fragment() {
                 imagem = "Imagine uma Cebola",
                 descricao = "Uma Cenoura",
                 quantidade = 10,
-                vencimento = "26/06/2022",
-                retirada = "25/06/2022",
+                valor = 0,
                 categoria = "Horti-fruit",
             ),
             Produto(
@@ -47,8 +45,7 @@ class ListFragment : Fragment() {
                 imagem = "Imagine uma Batata",
                 descricao = "Uma Cenoura",
                 quantidade = 8,
-                vencimento = "26/06/2022",
-                retirada = "25/06/2022",
+                valor = 0,
                 categoria = "Horti-fruit",
             ),
         )

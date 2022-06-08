@@ -5,7 +5,6 @@ data class Produto(
     var imagem: String,
     var descricao: String,
     var quantidade: Int,
-    var vencimento: String,
-    var retirada: String,
+    var valor: Int,
     var categoria: String,
 )

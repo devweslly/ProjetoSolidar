@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:cardElevation="20dp">
+    app:cardElevation="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,19 +26,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/retirada_produto_cardView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="Retirada Limite: 26/06/2022"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/nome_produto_cardView"
-            app:layout_constraintStart_toStartOf="@id/nome_produto_cardView"
-            app:layout_constraintTop_toBottomOf="@+id/nome_produto_cardView" />
-
-        <TextView
             android:id="@+id/quantidade_cardView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -50,7 +37,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/nome_produto_cardView"
             app:layout_constraintStart_toStartOf="@id/nome_produto_cardView"
-            app:layout_constraintTop_toBottomOf="@+id/retirada_produto_cardView" />
+            app:layout_constraintTop_toBottomOf="@+id/nome_produto_cardView" />
 
         <ImageView
             android:id="@+id/image_cardView"

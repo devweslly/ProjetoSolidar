@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/titulo_cadastro_produto"
+        android:id="@+id/titulo_lista_produto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -23,7 +23,7 @@
         android:hint="Nome do Produto"
         android:inputType="text"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo_cadastro_produto" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_lista_produto" />
 
     <ImageView
         android:id="@+id/imagem_produto"

@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginVertical="50dp">
 
     <TextView
-        android:id="@+id/titulo_cadastro_produto"
+        android:id="@+id/titulo_lista_produto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -23,26 +24,18 @@
         android:hint="Nome do Produto"
         android:inputType="text"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo_cadastro_produto" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_lista_produto" />
 
-    <ImageView
+    <EditText
         android:id="@+id/imagem_produto"
-        android:layout_width="225dp"
-        android:layout_height="125dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:src="@drawable/image_produto_teste"
-        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Imagem do Produto"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nome_produto" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#F40C0C"
-        android:text="Enviar"
-        app:layout_constraintBottom_toTopOf="@id/descricao_produto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imagem_produto"
-        app:layout_constraintTop_toBottomOf="@id/nome_produto" />
 
     <EditText
         android:id="@+id/descricao_produto"
@@ -64,25 +57,6 @@
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/descricao_produto" />
 
-    <EditText
-        android:id="@+id/vencimento_produto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Data de vencimento"
-        android:inputType="date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/quantidade_produto" />
-
-    <EditText
-        android:id="@+id/retirada_produto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="Retirar até"
-        android:inputType="date"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vencimento_produto" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -90,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/retirada_produto" />
+        app:layout_constraintTop_toBottomOf="@id/quantidade_produto" />
 
     <Button
         android:id="@+id/button_cadastrar_produto"

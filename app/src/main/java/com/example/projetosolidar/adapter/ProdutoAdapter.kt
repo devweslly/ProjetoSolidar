@@ -27,7 +27,6 @@ class ProdutoAdapter : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() 
         val produto = listProduto[position]
 
         holder.binding.nomeProdutoCardView.text = produto.nome
-        holder.binding.retiradaProdutoCardView.text = produto.retirada
         holder.binding.quantidadeCardView.text = produto.quantidade.toString()
     }
 
