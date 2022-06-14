@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoSolidar">
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginGeralActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,8 +25,7 @@
             android:name=".CadastroPerfilDoadorActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroProdutoDoador"
+            android:name=".MainActivity"
             android:exported="false" />
     </application>
-
 </manifest>

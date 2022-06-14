@@ -18,7 +18,7 @@ class CadastroPerfilDoadorActivity : AppCompatActivity(){
     }
 
     private fun irTelaCriarProduto(){
-        val telaCadasProduto = Intent(this, CadastroProdutoDoador::class.java)
+        val telaCadasProduto = Intent(this, MainActivity::class.java)
         startActivity(telaCadasProduto)
     }
 }
