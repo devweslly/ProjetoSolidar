@@ -25,7 +25,7 @@ class CadastroProdutoFragment : Fragment() {
 
         // Criando a lógica do Spinner
 
-        val spinnerPeso = binding.spinner
+        /* val spinnerPeso = binding.spinner
 
         // Para obter o context em um fragment, use getActivity(),
         // que renderiza a activity associada a um fragment.
@@ -41,7 +41,7 @@ class CadastroProdutoFragment : Fragment() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             // Apply the adapter to the spinner
             spinnerPeso.adapter = adapter
-        }
+        }*/
 
         binding.buttonCadastrarProduto.setOnClickListener {
             findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)

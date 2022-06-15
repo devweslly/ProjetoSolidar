@@ -1,0 +1,44 @@
+package com.example.projetosolidar
+
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.projetosolidar.api.Repository
+import com.example.projetosolidar.model.Categoria
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import retrofit2.Response
+import java.lang.Exception
+import javax.inject.Inject
+
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val repository : Repository
+): ViewModel()  {
+
+    // mutable list de categorias que recebemos da api (inacessivel)
+    private var _categoriaResponse = MutableLiveData<Response<List<Categoria>>>()
+
+    // criamos uma lista imutável a partir da mutable list anterior (acessivel)
+    val categoriaResponse : LiveData<Response<List<Categoria>>> = _categoriaResponse
+
+    fun listarCategoria(){
+        // criar a corrotina
+        viewModelScope.launch {
+            try {
+                // a resposta da requisição GET de listarCategoria
+                val response = repository.listarCategoria()
+                // atribuimos essa resposta ao mutableLiveData de _categoriaResponse
+                _categoriaResponse.value = response
+            } catch (e:Exception){
+                // criar logcat caso dê erro
+                Log.d("Erro", e.message.toString())
+            }
+
+        }
+    }
+
+
+}
