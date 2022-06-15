@@ -44,6 +44,7 @@ class CadastroProdutoFragment : Fragment() {
         }
 
         binding.buttonCadastrarProduto.setOnClickListener {
+            findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)
             cadastrarProduto()
         }
 
@@ -72,7 +73,7 @@ class CadastroProdutoFragment : Fragment() {
 
         if (validarCampos(nome, image, descricao, quantidade)) {
             Toast.makeText(context, "Cadastro Realizado", Toast.LENGTH_LONG).show()
-            findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)
+            //findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)
         } else {
             Toast.makeText(context, "Verifique os Campos", Toast.LENGTH_LONG).show()
         }
