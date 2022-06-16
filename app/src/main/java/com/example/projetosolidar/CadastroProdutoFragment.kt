@@ -1,19 +1,26 @@
 package com.example.projetosolidar
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.projetosolidar.databinding.FragmentCadastroProdutoBinding
+import com.example.projetosolidar.model.Categoria
 
 
 class CadastroProdutoFragment : Fragment() {
 
     private lateinit var binding: FragmentCadastroProdutoBinding
+    private val mainViewModel: MainViewModel by activityViewModels()
+    private var categoriaselecionada = 0L
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,33 +30,52 @@ class CadastroProdutoFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentCadastroProdutoBinding.inflate(layoutInflater, container, false)
 
-        // Criando a lógica do Spinner
+        mainViewModel.listarCategoria()
 
-        /* val spinnerPeso = binding.spinner
 
-        // Para obter o context em um fragment, use getActivity(),
-        // que renderiza a activity associada a um fragment.
-        var thiscontext = container!!.getContext()
+         mainViewModel.categoriaResponse.observe(viewLifecycleOwner) {
+           Log.d("Requisicao", it.body().toString())
 
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter.createFromResource(
-            thiscontext,
-            R.array.categoria,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            // Specify the layout to use when the list of choices appears
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            // Apply the adapter to the spinner
-            spinnerPeso.adapter = adapter
-        }*/
+            spinnercategoria(it.body())
+        }
 
         binding.buttonCadastrarProduto.setOnClickListener {
-            findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)
+
             cadastrarProduto()
         }
 
         return binding.root
     }
+
+    private fun spinnercategoria (listarcategoria: List<Categoria>?){
+        if (listarcategoria != null){
+            binding.spinner.adapter =
+                ArrayAdapter(
+                    requireContext(),
+                    androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                    listarcategoria
+                )
+            binding.spinner.onItemSelectedListener =
+                object: AdapterView.OnItemSelectedListener{
+                    override fun onItemSelected(
+                        parent: AdapterView<*>?,
+                        view: View?,
+                        position: Int,
+                        id: Long
+                    ) {
+                        val selected = binding.spinner.selectedItem as Categoria
+                        categoriaselecionada = selected.id
+                    }
+
+                    override fun onNothingSelected(parent: AdapterView<*>?) {
+                        TODO("Not yet implemented")
+                    }
+
+                }
+        }
+    }
+
+
 
     private fun validarCampos(
         nomeProd: String,
@@ -73,7 +99,7 @@ class CadastroProdutoFragment : Fragment() {
 
         if (validarCampos(nome, image, descricao, quantidade)) {
             Toast.makeText(context, "Cadastro Realizado", Toast.LENGTH_LONG).show()
-            //findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)
+            findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)
         } else {
             Toast.makeText(context, "Verifique os Campos", Toast.LENGTH_LONG).show()
         }

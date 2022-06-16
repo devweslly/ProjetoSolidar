@@ -15,14 +15,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val repository : Repository
+  private val repository : Repository
 ): ViewModel()  {
 
     // mutable list de categorias que recebemos da api (inacessivel)
-    private var _categoriaResponse = MutableLiveData<Response<List<Categoria>>>()
+    private val _categoriaResponse =
+        MutableLiveData<Response<List<Categoria>>>()
 
     // criamos uma lista imutável a partir da mutable list anterior (acessivel)
     val categoriaResponse : LiveData<Response<List<Categoria>>> = _categoriaResponse
+
 
     fun listarCategoria(){
         // criar a corrotina

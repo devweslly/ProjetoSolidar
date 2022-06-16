@@ -23,7 +23,7 @@ class ListFragment : Fragment() {
 
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
-        val listProduto = listOf(
+     /*   val listProduto = listOf(
             Produto(
                 nome = "Cenoura",
                 imagem = "Imagine uma Cenoura",
@@ -48,7 +48,7 @@ class ListFragment : Fragment() {
                 valor = 0,
                 categoria = "Horti-fruit",
             ),
-        )
+        )*/
 
         // Configuração do Recycler View
         val adapter = ProdutoAdapter()
@@ -56,7 +56,7 @@ class ListFragment : Fragment() {
         binding.recyclerProduto.adapter = adapter
         binding.recyclerProduto.setHasFixedSize(true)
 
-        adapter.setList(listProduto)
+
 
         // Navegar para o próximo fragment
         binding.floatingActionButton.setOnClickListener {
