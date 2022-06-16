@@ -7,11 +7,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.projetosolidar.api.Repository
 import com.example.projetosolidar.model.Categoria
+import com.example.projetosolidar.model.Produto
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
-import java.lang.Exception
 import javax.inject.Inject
+import kotlin.Exception
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
@@ -39,6 +40,16 @@ class MainViewModel @Inject constructor(
                 Log.d("Erro", e.message.toString())
             }
 
+        }
+    }
+
+    fun addProduto(produto: Produto){
+        viewModelScope.launch {
+            try {
+                repository.addProduto(produto)
+            }catch (e: Exception){
+                Log.d("ERRO", e.message.toString())
+            }
         }
     }
 

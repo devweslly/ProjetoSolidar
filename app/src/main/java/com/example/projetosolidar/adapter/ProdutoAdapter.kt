@@ -26,7 +26,7 @@ class ProdutoAdapter : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
         val produto = listProduto[position]
 
-        holder.binding.nomeProdutoCardView.text = produto.nome
+        holder.binding.nomeProdutoCardView.text = produto.nomeMarca
         holder.binding.quantidadeCardView.text = produto.quantidade.toString()
     }
 
