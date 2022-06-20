@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="Menu"/>
+
+    <item
+        android:id="@+id/listFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Início"/>
+
+    <item
+        android:id="@+id/notificacaoFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_notifications_active_24"
+        android:title="Notificação"/>
+
+    <item
+        android:id="@+id/usuarioFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Perfil"/>
+</menu>
