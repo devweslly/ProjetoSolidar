@@ -10,7 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/logo_solidar"
@@ -27,16 +27,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:hint="Email"
+            android:hint="@string/email"
+            android:inputType="textWebEmailAddress"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo_solidar" />
+            app:layout_constraintTop_toBottomOf="@id/logo_solidar"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/senha_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:hint="Senha"
+            android:hint="@string/senha"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/entrar_email" />
 
@@ -45,7 +51,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="Esqueceu a senha"
+            android:text="@string/esqueceu_a_senha"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/senha_email" />
 
@@ -55,21 +62,41 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:backgroundTint="#F40C0C"
-            android:text="Entrar"
+            android:text="@string/entrar"
+            android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/esqueceu_senha"/>
+            app:layout_constraintTop_toBottomOf="@id/esqueceu_senha" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnCadDoador"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="160dp"
-            android:text="Button"
+            android:backgroundTint="@color/white"
+            android:text="@string/cadastre_se_como_doador"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botao_entrar" />
+            app:layout_constraintTop_toBottomOf="@+id/botao_entrar"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/btnCadDonatario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/cadastre_se_como_ong_donat_ria"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCadDoador" />
 
         <!--
         <TextView

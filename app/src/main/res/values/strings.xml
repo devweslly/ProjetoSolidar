@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Soli{dar}</string>
+    <string name="cadastre_se_como_doador">Cadastre-se como doador</string>
+    <string name="entrar">Entrar</string>
+    <string name="esqueceu_a_senha">Esqueceu a senha</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="cadastre_se_como_ong_donat_ria">Cadastre-se como ong donatária</string>
 </resources>
