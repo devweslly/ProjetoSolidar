@@ -79,8 +79,8 @@ class CadastroProdutoFragment : Fragment() {
 
     private fun validarCampos(
         nomeProd: String,
-        descricaoProd: String,
         imageProd: String,
+        descricaoProd: String,
         quantidadeProd: Int
     ): Boolean {
         return !(
@@ -93,14 +93,14 @@ class CadastroProdutoFragment : Fragment() {
 
     private fun addProduto() {
         val nomeMarca = binding.nomeProduto.text.toString()
-        val descricao = binding.descricaoProduto.text.toString()
         val imagem = binding.imagemProduto.text.toString()
+        val descricao = binding.descricaoProduto.text.toString()
         val quantidade = binding.quantidadeProduto.text.toString().toInt() //Verificar se ocorre algum erro
         val valor = 0
         val categoria = Categoria(categoriaselecionada, null, null)
 
-        if (validarCampos(nomeMarca, descricao,  imagem, quantidade)) {
-            val produto = Produto(0, nomeMarca, descricao, imagem, quantidade, valor, categoria)
+        if (validarCampos(nomeMarca, imagem, descricao, quantidade)) {
+            val produto = Produto(0, nomeMarca, imagem, descricao, quantidade, valor, categoria)
             mainViewModel.addProduto(produto)
             Toast.makeText(context, "Cadastro Realizado", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_cadastroProdutoFragment_to_listFragment)

@@ -26,6 +26,10 @@ class MainViewModel @Inject constructor(
     // criamos uma lista imutável a partir da mutable list anterior (acessivel)
     val categoriaResponse : LiveData<Response<List<Categoria>>> = _categoriaResponse
 
+    private val _produtoResponse = MutableLiveData<Response<List<Produto>>>()
+
+    val produtoResponse : LiveData<Response<List<Produto>>> = _produtoResponse
+
 
     fun listarCategoria(){
         // criar a corrotina
@@ -47,6 +51,16 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.addProduto(produto)
+            }catch (e: Exception){
+                Log.d("ERRO", e.message.toString())
+            }
+        }
+    }
+    fun listarProduto(){
+        viewModelScope.launch {
+            try{
+                val response = repository.listarProduto()
+                _produtoResponse.value = response
             }catch (e: Exception){
                 Log.d("ERRO", e.message.toString())
             }
