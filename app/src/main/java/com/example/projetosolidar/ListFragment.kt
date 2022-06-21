@@ -17,6 +17,8 @@ class ListFragment : Fragment() {
     private lateinit var binding: FragmentListBinding
     private val mainViewModel: MainViewModel by activityViewModels()
 
+    /* TODO: IMPLEMENTAR O CARDVIEW DE CATEGORIAS */
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,33 +28,6 @@ class ListFragment : Fragment() {
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
         mainViewModel.listarProduto()
 
-     /*   val listProduto = listOf(
-            Produto(
-                nome = "Cenoura",
-                imagem = "Imagine uma Cenoura",
-                descricao = "Uma Cenoura",
-                quantidade = 5,
-                valor = 0,
-                categoria = "Horti-fruit",
-            ),
-            Produto(
-                nome = "Cebola",
-                imagem = "Imagine uma Cebola",
-                descricao = "Uma Cenoura",
-                quantidade = 10,
-                valor = 0,
-                categoria = "Horti-fruit",
-            ),
-            Produto(
-                nome = "Batata",
-                imagem = "Imagine uma Batata",
-                descricao = "Uma Cenoura",
-                quantidade = 8,
-                valor = 0,
-                categoria = "Horti-fruit",
-            ),
-        )*/
-
         // Configuração do Recycler View
         val adapter = ProdutoAdapter()
         binding.recyclerProduto.layoutManager = LinearLayoutManager(context)
@@ -60,16 +35,10 @@ class ListFragment : Fragment() {
         binding.recyclerProduto.setHasFixedSize(true)
 
 
-
-        // Navegar para o próximo fragment
-        binding.floatingActionButton.setOnClickListener {
-            findNavController().navigate(R.id.action_listFragment_to_cadastroProdutoFragment)
-        }
-
         mainViewModel.produtoResponse.observe(viewLifecycleOwner){
-            response -> if (response.body() != null){
-                adapter.setList(response.body()!!)
-        }
+                response -> if (response.body() != null){
+                    adapter.setList(response.body()!!)
+                }
         }
 
         return binding.root

@@ -27,7 +27,9 @@ class ProdutoAdapter : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() 
         val produto = listProduto[position]
 
         holder.binding.nomeProdutoCardView.text = produto.nomeMarca
-        holder.binding.quantidadeCardView.text = produto.quantidade.toString()
+        holder.binding.categoriaProdutoCardView.text = "Categoria: " + produto.categoria.descricao
+        holder.binding.quantidadeCardView.text = "Quantidade: " + produto.quantidade.toString()
+
     }
 
     override fun getItemCount(): Int {

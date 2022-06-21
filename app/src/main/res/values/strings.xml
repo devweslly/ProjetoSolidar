@@ -6,4 +6,8 @@
     <string name="senha">Senha</string>
     <string name="email">Email</string>
     <string name="cadastre_se_como_ong_donat_ria">Cadastre-se como ong donatária</string>
+    <string name="repetir_senha">Repetir Senha</string>
+    <string name="ao_criar_uma_conta_voc_concordar_com_nossos">Ao criar uma conta, você concordar com nossos</string>
+    <string name="criar_uma_conta">Criar uma Conta</string>
+    <string name="categorias">Categorias</string>
 </resources>

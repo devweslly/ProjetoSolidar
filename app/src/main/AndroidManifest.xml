@@ -22,10 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CadastroDoadorActivity"
+            android:name=".CadastroDonatarioActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroPerfilDoadorActivity"
+            android:name=".CadastroPerfilDonatarioActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

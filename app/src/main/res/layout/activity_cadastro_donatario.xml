@@ -5,71 +5,76 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/logo_doador"
+        android:id="@+id/logo_donatario"
         android:layout_width="250dp"
         android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/do_ar_"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/rece_ber_"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titulo_cadastro_doador"
+        android:id="@+id/titulo_cadastro_donatario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Criar uma Conta"
+        android:text="@string/criar_uma_conta"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo_doador" />
+        app:layout_constraintTop_toBottomOf="@id/logo_donatario" />
 
     <EditText
-        android:id="@+id/nome_completo_doador"
+        android:id="@+id/nome_completo_donatario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Nome Completo"
+        android:hint="Nome da ONG"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo_cadastro_doador" />
+        app:layout_constraintTop_toBottomOf="@id/titulo_cadastro_donatario" />
 
     <EditText
-        android:id="@+id/entrar_email_doador"
+        android:id="@+id/entrar_email_donatario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Email"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nome_completo_doador" />
+        app:layout_constraintTop_toBottomOf="@id/nome_completo_donatario" />
 
     <EditText
-        android:id="@+id/senha_email_doador"
+        android:id="@+id/senha_email_donatario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Senha"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/entrar_email_doador" />
+        app:layout_constraintTop_toBottomOf="@id/entrar_email_donatario" />
 
     <EditText
-        android:id="@+id/repetir_senha_doador"
+        android:id="@+id/repetir_senha_donatario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Repetir Senha"
+        android:hint="@string/repetir_senha"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/senha_email_doador" />
+        app:layout_constraintTop_toBottomOf="@id/senha_email_donatario" />
 
     <TextView
         android:id="@+id/termo_condicoes1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Ao criar uma conta, você concordar com nossos"
+        android:text="@string/ao_criar_uma_conta_voc_concordar_com_nossos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/repetir_senha_doador" />
+        app:layout_constraintTop_toBottomOf="@id/repetir_senha_donatario" />
 
     <TextView
         android:id="@+id/termo_condicoes2"
@@ -84,15 +89,20 @@
         app:layout_constraintTop_toBottomOf="@id/termo_condicoes1" />
 
     <Button
-        android:id="@+id/botao_criar_doador"
+        android:id="@+id/botao_criar_donatario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#F40C0C"
         android:text="Continuar"
+        android:textColor="@color/white"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/termo_condicoes2" />
+        app:layout_constraintTop_toBottomOf="@id/termo_condicoes2"
+        app:layout_constraintVertical_bias="0.239" />
 
     <!--
     <EditText

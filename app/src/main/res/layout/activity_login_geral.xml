@@ -69,34 +69,20 @@
             app:layout_constraintTop_toBottomOf="@id/esqueceu_senha" />
 
         <Button
-            android:id="@+id/btnCadDoador"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="160dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/cadastre_se_como_doador"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/botao_entrar"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <Button
             android:id="@+id/btnCadDonatario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginBottom="52dp"
             android:backgroundTint="@color/white"
             android:text="@string/cadastre_se_como_ong_donat_ria"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCadDoador" />
+            app:layout_constraintTop_toBottomOf="@+id/botao_entrar" />
 
         <!--
         <TextView

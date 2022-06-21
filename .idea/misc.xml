@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_doador.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_donatario.xml" value="0.14447463768115942" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_perfil_doador.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_perfil_donatario.xml" value="0.18931159420289856" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_editar_perfil_doador.xml" value="0.14447463768115942" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_login_geral.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_main.xml" value="0.14447463768115942" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_validar_doacao_doador.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/card_layout.xml" value="0.18931159420289856" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/fragment_cadastro_produto.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/fragment_list.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.116" />

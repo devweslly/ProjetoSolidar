@@ -47,15 +47,6 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun addProduto(produto: Produto){
-        viewModelScope.launch {
-            try {
-                repository.addProduto(produto)
-            }catch (e: Exception){
-                Log.d("ERRO", e.message.toString())
-            }
-        }
-    }
     fun listarProduto(){
         viewModelScope.launch {
             try{
@@ -66,6 +57,5 @@ class MainViewModel @Inject constructor(
             }
         }
     }
-
 
 }

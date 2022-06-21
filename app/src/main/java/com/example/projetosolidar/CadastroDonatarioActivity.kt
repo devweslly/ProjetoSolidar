@@ -4,26 +4,25 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import dagger.hilt.android.AndroidEntryPoint
 
 
-class CadastroDoadorActivity : AppCompatActivity() {
+class CadastroDonatarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastro_doador)
+        setContentView(R.layout.activity_cadastro_donatario)
 
         // findViewById(id) - acessando o botão
-        val botaoTelaCadastDoador = findViewById<Button>(R.id.botao_criar_doador)
+        val botaoTelaCadastDonatario = findViewById<Button>(R.id.botao_criar_donatario)
 
         // Ação de click
-        botaoTelaCadastDoador.setOnClickListener {
+        botaoTelaCadastDonatario.setOnClickListener {
             // chamada do metodo
             irTelaCadastroPerfil()
         }
     }
 
     private fun irTelaCadastroPerfil(){
-        val telaCadasPerfilDoador = Intent(this, CadastroPerfilDoadorActivity::class.java)
-        startActivity(telaCadasPerfilDoador)
+        val telaCadasPerfilDonatario = Intent(this, CadastroPerfilDonatarioActivity::class.java)
+        startActivity(telaCadasPerfilDonatario)
     }
 }

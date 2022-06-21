@@ -9,20 +9,5 @@
         android:id="@+id/listFragment"
         android:name="com.example.projetosolidar.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
-        <action
-            android:id="@+id/action_listFragment_to_cadastroProdutoFragment"
-            app:destination="@id/cadastroProdutoFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/cadastroProdutoFragment"
-        android:name="com.example.projetosolidar.CadastroProdutoFragment"
-        android:label="fragment_cadastro_produto"
-        tools:layout="@layout/fragment_cadastro_produto" >
-        <action
-            android:id="@+id/action_cadastroProdutoFragment_to_listFragment"
-            app:destination="@id/listFragment"
-            app:popUpTo="@id/listFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
+        tools:layout="@layout/fragment_list" />
 </navigation>

@@ -16,19 +16,19 @@ class LoginGeralActivity : AppCompatActivity() {
         // Ação de click
         botaoTelaLoginGeral.setOnClickListener {
             // chamada do metodo
-            irTelaCadastroDoador()
+            irTelaCadastroDonatario()
         }
 
     }
 
-    private fun irTelaCadastroDoador() {
+    private fun irTelaCadastroDonatario() {
         // Criando uma intenção - Ir de uma activity para outra (Navegar entre Activitys)
         // A tela cadastro doador recebe um Intent
         // na Class Intent, o parametro context: this indica qual a activity atual estamos (MainActivity)
         // no segundo parametro indicamos para qual activity quero ir LoginGeralActivity
         // e para gerar o intent precisamos converter a class LoginGeralActivity em uma class Java
         // (de MainActivity (nosso this) para LoginGeralActivity)
-        val telaCadastroDoador = Intent(this, CadastroDoadorActivity::class.java)
+        val telaCadastroDoador = Intent(this, CadastroDonatarioActivity::class.java)
         // o método startActivity inicializa a intenção (recebendo uma Intent)
         // que no caso é o objeto Intent telaCadastroDoador
         // que está recebendo uma intenção
