@@ -10,4 +10,6 @@
     <string name="ao_criar_uma_conta_voc_concordar_com_nossos">Ao criar uma conta, você concordar com nossos</string>
     <string name="criar_uma_conta">Criar uma Conta</string>
     <string name="categorias">Categorias</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

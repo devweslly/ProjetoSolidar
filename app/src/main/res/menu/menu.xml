@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Início"/>
+
+    <item
+        android:id="@+id/carrinhoFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:title="Carrinho"/>
+
+    <item
+        android:id="@+id/pedidosFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_watch_later_24"
+        android:title="Pedidos"/>
+
+    <item
+        android:id="@+id/editarPerfilFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Perfil"/>
+</menu>

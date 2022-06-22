@@ -10,4 +10,19 @@
         android:name="com.example.projetosolidar.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" />
+    <fragment
+        android:id="@+id/carrinhoFragment"
+        android:name="com.example.projetosolidar.CarrinhoFragment"
+        android:label="fragment_carrinho"
+        tools:layout="@layout/fragment_carrinho" />
+    <fragment
+        android:id="@+id/pedidosFragment"
+        android:name="com.example.projetosolidar.PedidosFragment"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos" />
+    <fragment
+        android:id="@+id/editarPerfilFragment"
+        android:name="com.example.projetosolidar.EditarPerfilFragment"
+        android:label="fragment_editar_perfil"
+        tools:layout="@layout/fragment_editar_perfil" />
 </navigation>
