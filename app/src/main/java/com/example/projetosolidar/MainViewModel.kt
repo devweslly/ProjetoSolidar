@@ -19,6 +19,7 @@ class MainViewModel @Inject constructor(
   private val repository : Repository
 ): ViewModel()  {
 
+    var produtoSelecionado: Produto? = null
     // mutable list de categorias que recebemos da api (inacessivel)
     private val _categoriaResponse =
         MutableLiveData<Response<List<Categoria>>>()

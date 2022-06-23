@@ -9,7 +9,11 @@
         android:id="@+id/listFragment"
         android:name="com.example.projetosolidar.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_infoProdutoFragment"
+            app:destination="@id/infoProdutoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/carrinhoFragment"
         android:name="com.example.projetosolidar.CarrinhoFragment"
@@ -25,4 +29,15 @@
         android:name="com.example.projetosolidar.EditarPerfilFragment"
         android:label="fragment_editar_perfil"
         tools:layout="@layout/fragment_editar_perfil" />
+    <fragment
+        android:id="@+id/infoProdutoFragment"
+        android:name="com.example.projetosolidar.InfoProdutoFragment"
+        android:label="fragment_info_produto"
+        tools:layout="@layout/fragment_info_produto" >
+        <action
+            android:id="@+id/action_infoProdutoFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
