@@ -12,4 +12,18 @@
     <string name="categorias">Categorias</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="meus_pedidos">Meus Pedidos</string>
+    <string name="nome_da_ong">Nome da ONG</string>
+    <string name="cnpj_cpf">CNPJ/CPF</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="cep">CEP</string>
+    <string name="endere_o">Endereço</string>
+    <string name="n_mero">Número</string>
+    <string name="bairro">Bairro</string>
+    <string name="cidade">Cidade</string>
+    <string name="salvar_altera_es">Salvar Alterações</string>
+    <string name="sair">Sair</string>
+    <string name="termos_e_condi_es">termos e condições.</string>
+    <string name="criar_conta">Criar Conta</string>
+    <string name="carrinho">Carrinho</string>
 </resources>

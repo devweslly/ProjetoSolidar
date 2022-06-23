@@ -3,6 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_donatario.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_perfil_donatario.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/activity_editar_perfil_donatario.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/activity_login_geral.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/activity_main.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/card_layout.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/fragment_carrinho.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/fragment_editar_perfil.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/fragment_list.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/layout/fragment_pedidos.xml" value="0.15625" />
+        <entry key="..\:/Users/mayar/Desktop/generation-brasil/ProjetoSolidar/app/src/main/res/menu/menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_doador.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_donatario.xml" value="0.14447463768115942" />
         <entry key="..\:/Users/mayar/Desktop/generation-brasil/exercicios-generation/ProjetoSolidar/app/src/main/res/layout/activity_cadastro_perfil_doador.xml" value="0.17074275362318841" />
@@ -32,10 +43,8 @@
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/layout/activity_validar_doacao_doador.xml" value="0.25" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/layout/card_layout.xml" value="0.33" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/layout/fragment_cadastro_produto.xml" value="0.25" />
-        <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/layout/fragment_editar_perfil.xml" value="0.2" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/layout/fragment_list.xml" value="0.22" />
         <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
-        <entry key="..\:/Users/wesll/Documents/Projetos/ProjetoSolidar/app/src/main/res/menu/menu.xml" value="0.2" />
       </map>
     </option>
   </component>

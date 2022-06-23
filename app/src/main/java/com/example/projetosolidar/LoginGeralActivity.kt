@@ -13,9 +13,15 @@ class LoginGeralActivity : AppCompatActivity() {
         // findViewById(id) - acessando o botão
         val botaoTelaLoginGeral = findViewById<Button>(R.id.botao_entrar)
 
+        val botaoCriarConta = findViewById<Button>(R.id.btnCadDonatario)
+
         // Ação de click
         botaoTelaLoginGeral.setOnClickListener {
             // chamada do metodo
+            irMainActivity()
+        }
+
+        botaoCriarConta.setOnClickListener {
             irTelaCadastroDonatario()
         }
 
@@ -33,5 +39,10 @@ class LoginGeralActivity : AppCompatActivity() {
         // que no caso é o objeto Intent telaCadastroDoador
         // que está recebendo uma intenção
         startActivity(telaCadastroDoador)
+    }
+
+    private fun irMainActivity() {
+        val telaMain = Intent(this, MainActivity::class.java)
+        startActivity(telaMain)
     }
 }
