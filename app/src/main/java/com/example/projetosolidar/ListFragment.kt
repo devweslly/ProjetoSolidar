@@ -47,6 +47,7 @@ class ListFragment : Fragment(), ProdutoClickListener {
 
     override fun onProdutoClickListener(produto: Produto) {
         mainViewModel.produtoSelecionado = produto
+
         findNavController().navigate(R.id.action_listFragment_to_infoProdutoFragment)
     }
 }

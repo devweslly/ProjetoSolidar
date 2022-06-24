@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.projetosolidar.databinding.FragmentInfoProdutoBinding
 import com.example.projetosolidar.model.Produto
 
@@ -23,6 +24,11 @@ class InfoProdutoFragment : Fragment() {
         binding = FragmentInfoProdutoBinding.inflate(layoutInflater, container, false)
 
         carregarDados()
+
+        binding.ButtonVoltar.setOnClickListener {
+            findNavController().navigate(R.id.action_infoProdutoFragment_to_listFragment)
+        }
+
         // Inflate the layout for this fragment
         return binding.root
     }
