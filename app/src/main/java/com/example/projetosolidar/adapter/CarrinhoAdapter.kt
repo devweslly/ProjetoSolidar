@@ -8,48 +8,46 @@ import com.bumptech.glide.Glide
 import com.example.projetosolidar.MainViewModel
 import com.example.projetosolidar.R
 import com.example.projetosolidar.databinding.CardLayoutBinding
+import com.example.projetosolidar.databinding.CardLayoutCarrinhoBinding
 import com.example.projetosolidar.model.Produto
 
-class CarrinhoAdapter( val mainViewModel: MainViewModel, private val context: Context
-): RecyclerView.Adapter<CarrinhoAdapter.carrinhoviewholder>() {
+class CarrinhoAdapter(
+    mainViewModel: MainViewModel,
+    private val context: Context
+): RecyclerView.Adapter<CarrinhoAdapter.CarrinhoViewHolder>() {
 
     private var carrinho = mainViewModel.pedido
 
-    class carrinhoviewholder(val binding: CardLayoutBinding) : RecyclerView.ViewHolder(binding.root)
+    class CarrinhoViewHolder(val binding: CardLayoutCarrinhoBinding) : RecyclerView.ViewHolder(binding.root)
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): carrinhoviewholder {
-        return CarrinhoAdapter.carrinhoviewholder(
-            CardLayoutBinding.inflate(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarrinhoViewHolder  {
+        return CarrinhoViewHolder (
+            CardLayoutCarrinhoBinding.inflate(
                 LayoutInflater.from(
                     parent.context
                 ), parent, false
             )
         )
-
     }
 
-    override fun onBindViewHolder(holder: carrinhoviewholder, position: Int) {
+    override fun onBindViewHolder(holder: CarrinhoViewHolder, position: Int) {
         val produto = carrinho[position]
 
-        
-
-       // holder.binding.nomeProdutoCardView.text = produto.toString()
-       /* holder.binding.categoriaProdutoCardView.text =  produto.categoria.toString()
+        holder.binding.nomeProdutoCardView.text = produto.nomeMarca
+        holder.binding.categoriaProdutoCardView.text =  produto.categoria.toString()
         holder.binding.quantidadeCardView.text =  produto.quantidade.toString()
-*/
-       /* Glide.with(context)
+        Glide.with(context)
             .load(produto.imagem)
             .placeholder(R.drawable.ic_baseline_close_24)
-          .into(holder.binding.imageCardView)  */
+          .into(holder.binding.imageCardView)
     }
 
     override fun getItemCount(): Int {
         return carrinho.size
     }
-   /* fun setlist(list: List<Produto>){
-        carrinho = list.sortedByDescending {
-            it.id}
+
+   fun setlist(list: List<Produto>){
+        //carrinho = list.sortedByDescending { it.id}
         notifyDataSetChanged()
-    }*/
+    }
 }

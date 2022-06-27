@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
@@ -29,17 +30,15 @@ class InfoProdutoFragment : Fragment() {
 
         carregarDados()
 
-
-
         binding.ButtonVoltar.setOnClickListener {
             findNavController().navigate(R.id.action_infoProdutoFragment_to_listFragment)
         }
 
         binding.buttonAdicionarSacola.setOnClickListener {
-
             produtoSelecionado = mainViewModel.produtoSelecionado
-
             mainViewModel.addcarrinho(produtoSelecionado!!)
+            Toast.makeText(context, "Produto adicionado ao carrinho!", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_infoProdutoFragment_to_listFragment)
         }
 
 
@@ -56,7 +55,6 @@ class InfoProdutoFragment : Fragment() {
             .load(produtoSelecionado?.imagem)
             .placeholder(R.drawable.ic_baseline_close_24)
             .into(binding.imageProduto)
-
 
     }
 }

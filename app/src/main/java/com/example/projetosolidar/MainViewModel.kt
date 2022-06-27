@@ -19,24 +19,23 @@ import kotlin.Exception
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-  private val repository : Repository, application: Application
-): AndroidViewModel(application)  {
+    private val repository: Repository, application: Application
+) : AndroidViewModel(application) {
 
-     var pedido = mutableListOf<List<Produto>>()
-
-
+    var pedido = mutableListOf<Produto>()
 
     var produtoSelecionado: Produto? = null
+
     // mutable list de categorias que recebemos da api (inacessivel)
     private val _categoriaResponse =
         MutableLiveData<Response<List<Categoria>>>()
 
     // criamos uma lista imutável a partir da mutable list anterior (acessivel)
-    val categoriaResponse : LiveData<Response<List<Categoria>>> = _categoriaResponse
+    val categoriaResponse: LiveData<Response<List<Categoria>>> = _categoriaResponse
 
     private val _produtoResponse = MutableLiveData<Response<List<Produto>>>()
 
-    val produtoResponse : LiveData<Response<List<Produto>>> = _produtoResponse
+    val produtoResponse: LiveData<Response<List<Produto>>> = _produtoResponse
 
     //val selectUsuario: LiveData<List<Usuario>>
     val usuarioRepository: UsuarioRepository
@@ -48,7 +47,7 @@ class MainViewModel @Inject constructor(
     }
 
 
-    fun listarCategoria(){
+    fun listarCategoria() {
         // criar a corrotina
         viewModelScope.launch {
             try {
@@ -56,7 +55,7 @@ class MainViewModel @Inject constructor(
                 val response = repository.listarCategoria()
                 // atribuimos essa resposta ao mutableLiveData de _categoriaResponse
                 _categoriaResponse.value = response
-            } catch (e:Exception){
+            } catch (e: Exception) {
                 // criar logcat caso dê erro
                 Log.d("Erro", e.message.toString())
             }
@@ -64,30 +63,20 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun listarProduto(){
+    fun listarProduto() {
         viewModelScope.launch {
-            try{
+            try {
                 val response = repository.listarProduto()
                 _produtoResponse.value = response
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 Log.d("ERRO", e.message.toString())
             }
         }
     }
 
-    fun addUsuario(usuario: Usuario){
-        viewModelScope.launch (Dispatchers.IO){
-            try {
-                usuarioRepository.addUsuario(usuario)
-            }catch (e: Exception){
-                Log.d("ERRO", e.message.toString())
-            }
-        }
-    }
-    fun addcarrinho (produto: Produto) {
-       pedido.add(listOf(produto))
-        Log.d("Pedido",pedido.toString())
+    fun addcarrinho(produto: Produto) {
+        pedido.add(produto)
+        Log.d("Pedido", pedido.toString())
     }
 
-
-    }
+}

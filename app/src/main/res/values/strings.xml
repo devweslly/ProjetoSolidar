@@ -26,4 +26,5 @@
     <string name="termos_e_condi_es">termos e condições.</string>
     <string name="criar_conta">Criar Conta</string>
     <string name="carrinho">Carrinho</string>
+    <string name="deletar_do_carrinho">Deletar do Carrinho</string>
 </resources>
