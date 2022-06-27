@@ -25,9 +25,6 @@
             android:name=".CadastroDonatarioActivity"
             android:exported="false" />
         <activity
-            android:name=".CadastroPerfilDonatarioActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
     </application>
