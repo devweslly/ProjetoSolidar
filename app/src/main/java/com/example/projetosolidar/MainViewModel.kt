@@ -79,4 +79,13 @@ class MainViewModel @Inject constructor(
         Log.d("Pedido", pedido.toString())
     }
 
+    fun deletarCarrinho(produto: Produto){
+        if(pedido.contains(produto)){
+            pedido.remove(produto)
+            Log.d("Pedido", pedido.toString())
+        }else{
+            Log.d("PedidoErro", pedido.toString())
+        }
+    }
+
 }

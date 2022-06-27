@@ -12,7 +12,7 @@ import com.example.projetosolidar.databinding.CardLayoutCarrinhoBinding
 import com.example.projetosolidar.model.Produto
 
 class CarrinhoAdapter(
-    mainViewModel: MainViewModel,
+    val mainViewModel: MainViewModel,
     private val context: Context
 ): RecyclerView.Adapter<CarrinhoAdapter.CarrinhoViewHolder>() {
 
@@ -40,14 +40,14 @@ class CarrinhoAdapter(
             .load(produto.imagem)
             .placeholder(R.drawable.ic_baseline_close_24)
           .into(holder.binding.imageCardView)
+
+        holder.binding.buttonDeletarItem.setOnClickListener {
+            mainViewModel.deletarCarrinho(produto)
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int {
         return carrinho.size
-    }
-
-   fun setlist(list: List<Produto>){
-        //carrinho = list.sortedByDescending { it.id}
-        notifyDataSetChanged()
     }
 }
