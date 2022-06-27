@@ -11,11 +11,6 @@ interface ApiService {
     @GET("categoria")
     suspend fun listarCategoria() : Response<List<Categoria>>
 
-    @POST("produtos")
-    suspend fun addProduto(
-        @Body produto: Produto
-    ): Response<Produto>
-
     @GET ("produtos")
     suspend fun listarProduto() : Response<List<Produto>>
 

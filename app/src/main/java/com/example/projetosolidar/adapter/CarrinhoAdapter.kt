@@ -34,8 +34,8 @@ class CarrinhoAdapter(
         val produto = carrinho[position]
 
         holder.binding.nomeProdutoCardView.text = produto.nomeMarca
-        holder.binding.categoriaProdutoCardView.text =  produto.categoria.toString()
-        holder.binding.quantidadeCardView.text =  produto.quantidade.toString()
+        holder.binding.categoriaProdutoCardView.text =  "Categoria: " + produto.categoria.toString()
+        holder.binding.quantidadeCardView.text =  "Quantidade: " + produto.quantidade.toString()
         Glide.with(context)
             .load(produto.imagem)
             .placeholder(R.drawable.ic_baseline_close_24)

@@ -10,13 +10,7 @@ class Repository {
         return RetrofitInstance.api.listarCategoria()
     }
 
-    suspend fun addProduto(produto: Produto): Response<Produto> {
-        return RetrofitInstance.api.addProduto(produto)
-    }
-
     suspend fun listarProduto(): Response<List<Produto>> {
         return RetrofitInstance.api.listarProduto()
-
-
     }
 }

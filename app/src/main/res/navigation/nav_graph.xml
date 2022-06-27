@@ -18,7 +18,13 @@
         android:id="@+id/carrinhoFragment"
         android:name="com.example.projetosolidar.CarrinhoFragment"
         android:label="fragment_carrinho"
-        tools:layout="@layout/fragment_carrinho" />
+        tools:layout="@layout/fragment_carrinho" >
+        <action
+            android:id="@+id/action_carrinhoFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/pedidosFragment"
         android:name="com.example.projetosolidar.PedidosFragment"

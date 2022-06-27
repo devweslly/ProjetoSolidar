@@ -39,11 +39,26 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleCarrinho"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonFinalizarPedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/buttonFinalizarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/red"
+        android:text="Finalizar Pedido"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tituloTela" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
