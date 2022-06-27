@@ -22,6 +22,10 @@ class MainViewModel @Inject constructor(
   private val repository : Repository, application: Application
 ): AndroidViewModel(application)  {
 
+     var pedido = mutableListOf<List<Produto>>()
+
+
+
     var produtoSelecionado: Produto? = null
     // mutable list de categorias que recebemos da api (inacessivel)
     private val _categoriaResponse =
@@ -80,4 +84,10 @@ class MainViewModel @Inject constructor(
             }
         }
     }
-}
+    fun addcarrinho (produto: Produto) {
+       pedido.add(listOf(produto))
+        Log.d("Pedido",pedido.toString())
+    }
+
+
+    }

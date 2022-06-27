@@ -30,7 +30,7 @@ class ListFragment : Fragment(), ProdutoClickListener {
         mainViewModel.listarProduto()
 
         // Configuração do Recycler View
-        val adapter = ProdutoAdapter(this, mainViewModel)
+        val adapter = ProdutoAdapter(this, mainViewModel,requireContext())
         binding.recyclerProduto.layoutManager = LinearLayoutManager(context)
         binding.recyclerProduto.adapter = adapter
         binding.recyclerProduto.setHasFixedSize(true)

@@ -1,15 +1,22 @@
 package com.example.projetosolidar.adapter
 
+import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.projetosolidar.MainViewModel
+import com.example.projetosolidar.R
+import com.example.projetosolidar.UsuarioViewModel
 import com.example.projetosolidar.databinding.CardLayoutBinding
 import com.example.projetosolidar.model.Produto
 
 class ProdutoAdapter(
     val produtoClickListener: ProdutoClickListener,
-    val mainViewModel: MainViewModel
+    val mainViewModel: MainViewModel,
+    private var context: Context
+
 ) : RecyclerView.Adapter<ProdutoAdapter.ProdutoViewHolder>() {
 
     private var listProduto = emptyList<Produto>()
@@ -34,6 +41,11 @@ class ProdutoAdapter(
         holder.binding.categoriaProdutoCardView.text = "Categoria: " + produto.categoria.descricao
         holder.binding.quantidadeCardView.text = "Quantidade: " + produto.quantidade.toString()
 
+        Glide.with(context)
+            .load(produto.imagem)
+            .placeholder(R.drawable.ic_baseline_close_24)
+            .into(holder.binding.imageCardView)
+
         holder.itemView.setOnClickListener {
             produtoClickListener.onProdutoClickListener(produto)
         }
@@ -47,4 +59,6 @@ class ProdutoAdapter(
         listProduto = list.sortedByDescending { it.id }
         notifyDataSetChanged()
     }
+
+
 }

@@ -3,9 +3,7 @@ package com.example.projetosolidar.api
 import com.example.projetosolidar.model.Categoria
 import com.example.projetosolidar.model.Produto
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -20,4 +18,6 @@ interface ApiService {
 
     @GET ("produtos")
     suspend fun listarProduto() : Response<List<Produto>>
+
+
 }

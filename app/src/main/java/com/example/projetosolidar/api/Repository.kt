@@ -6,16 +6,17 @@ import retrofit2.Response
 
 class Repository {
 
-    suspend fun listarCategoria() : Response<List<Categoria>>{
+    suspend fun listarCategoria(): Response<List<Categoria>> {
         return RetrofitInstance.api.listarCategoria()
     }
 
-    suspend fun addProduto(produto: Produto): Response<Produto>{
+    suspend fun addProduto(produto: Produto): Response<Produto> {
         return RetrofitInstance.api.addProduto(produto)
     }
 
-    suspend fun listarProduto() : Response<List<Produto>>{
+    suspend fun listarProduto(): Response<List<Produto>> {
         return RetrofitInstance.api.listarProduto()
-    }
 
+
+    }
 }
