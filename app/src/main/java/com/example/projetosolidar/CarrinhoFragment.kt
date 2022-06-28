@@ -45,7 +45,8 @@ class CarrinhoFragment : Fragment() {
                 AlertDialog.Builder(context)
                     .setTitle("Pedido Confirmado!")
                     .setIcon(R.drawable.confirmacao_doacao)
-                    .setMessage("Seu pedido foi confirmado, yay!")
+                    .setMessage("Seu pedido foi confirmado, yay!\n" +
+                            "Código do pedido: 59864821\n")
                     .setPositiveButton("Okay"){
                             _,_ -> findNavController().navigate(R.id.action_carrinhoFragment_to_listFragment)
                     }.show()
